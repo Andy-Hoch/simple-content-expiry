@@ -25,7 +25,7 @@ function hideExpiredElements()
         let expiryTime = new Date(year,month,day,hour, min);
         let now = new Date();
         if (now > expiryTime) {
-            allExpiringElements[i].style.display = 'hidden';
+            allExpiringElements[i].style.display = 'none';
         } //Does it work? I have no idea. 
     }
 }
