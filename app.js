@@ -67,13 +67,11 @@ function hideExpiredElements()
         let hour = 0;
         let min = 0;
         year = allExpiringElements[i].attributes["exYear"].value;
-        console.log(year)
         month = allExpiringElements[i].attributes["exMonth"].value - 1;
         day = allExpiringElements[i].attributes["exDay"].value;
         hour = allExpiringElements[i].attributes["exHour"].value;
-        minute = allExpiringElements[i].attributes["exMin"].value;
+        min = allExpiringElements[i].attributes["exMin"].value;
         let expiryTime = new Date(year,month,day,hour, min);
-        console.log(expiryTime);
         if (now > expiryTime) {
             allExpiringElements[i].style.display = 'none';
         } //Does it work? I have no idea. 
@@ -81,3 +79,4 @@ function hideExpiredElements()
 }
 
 hideExpiredElements();
+setInterval(hideExpiredElements, 5000);
