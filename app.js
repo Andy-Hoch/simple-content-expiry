@@ -17,13 +17,19 @@ function hideExpiredElements()
 {
     for (let i = 0, n = allExpiringElements.length; i < n; i++)
     {
-        let year = allExpiringElements[i].attributes["exYear"];
-        let month = allExpiringElements[i].attributes["exMonth"] - 1;
-        let day = allExpiringElements[i].attributes["exDay"];
-        let hour = allExpiringElements[i].attributes["exHour"];
-        let minute = allExpiringElements[i].attributes["exMin"];
-        let expiryTime = new Date(year,month,day,hour, min);
         let now = new Date();
+        let year = now.getFullYear;
+        let month;
+        let day;
+        let hour = 0;
+        let minute = 0;
+        year = allExpiringElements[i].attributes["exYear"];
+        month = allExpiringElements[i].attributes["exMonth"] - 1;
+        day = allExpiringElements[i].attributes["exDay"];
+        hour = allExpiringElements[i].attributes["exHour"];
+        minute = allExpiringElements[i].attributes["exMin"];
+        let expiryTime = new Date(year,month,day,hour, min);
+        
         if (now > expiryTime) {
             allExpiringElements[i].style.display = 'none';
         } //Does it work? I have no idea. 
