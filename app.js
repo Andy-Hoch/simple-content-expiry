@@ -1,4 +1,4 @@
-function allExpiringElements("exYear")
+function allExpiringElements()
 {
   let matchingElements = [];
   let allElements = document.getElementsByTagName('*');
