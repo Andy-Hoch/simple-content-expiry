@@ -1,4 +1,4 @@
-let allExpiringElements = document.querySelectorAll('[exYear]')
+let allExpiringElements = document.querySelectorAll('[exY]')
 function hideExpiredElements()
 {
     for (let i = 0, n = allExpiringElements.length; i < n; i++)
