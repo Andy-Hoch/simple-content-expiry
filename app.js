@@ -53,9 +53,6 @@ function hideExpiredElements()
 }*/
 
 let allExpiringElements = document.querySelectorAll('[exYear]')
-
-console.log(allExpiringElements);
-
 function hideExpiredElements()
 {
     for (let i = 0, n = allExpiringElements.length; i < n; i++)
@@ -77,6 +74,5 @@ function hideExpiredElements()
         } //Does it work? I have no idea. 
     }
 }
-
 hideExpiredElements();
 setInterval(hideExpiredElements, 5000);
