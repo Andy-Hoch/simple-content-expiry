@@ -30,7 +30,7 @@ Minute: 0
 For the overview, all values can always be set individually. Except for the year, however, only the values that differ from the default values can be set.
 
 # Example
-Just add your needed custom attributesto the element like this:
+Just add your needed custom attributes to the element like this:
 
 ~~~
 <div exyear="2022" exmonth="11" exday="11" exhour="11" exmin="11" class="content"></div>
